@@ -32,5 +32,5 @@ and selects which of the cached lines to replace. The cache implements a replace
 In our case, the two-way set-associative cache will use the LRU replacement policy, which maintains an LRU
 array that tracks which of the two lines in each set was accessed least recently.
 
-
+October 2021.
 
