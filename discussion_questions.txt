@@ -1,0 +1,18 @@
+1.
+00bc: tag=0x0, index=0x02, word_offset=F
+0x1094: tag=0x01, index=0x02, word 0x5
+0x0084: tag=0x0, index=0x02, word = 0x1
+
+2.
+R L F R - req index 2, tag miss, store word set to dirty
+R L R   - req index 2, tag match
+R L W F R - req index 2, tag miss, status dirty do write back, fill,
+R L F R   - req index 2, tag miss, fill set to dirty
+R L R   - req index 2, tag hit
+
+3. 
+R L F R
+R L R
+R L F R - have the second cache, so use that
+R L W F R - the line is diry and we are trying to store, thus will go to writeback
+R L R
